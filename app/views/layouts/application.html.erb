@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <%# <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"> %>
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,6 +18,8 @@
             <span class="icon-bar"></span>
           </button>
         <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
+        <a class="navbar-brand" href="<%= sign_up_url %>"/>Sign Up</a>
+        <a class="navbar-brand" href="<%= log_in_url %>"/>Log In</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
