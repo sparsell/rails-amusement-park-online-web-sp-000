@@ -1,0 +1,13 @@
+<h1> Welcome to the Abusement Park, <%= @user.name %></h1>
+
+<% if @user.admin %>
+    Admin
+    <% else %>
+    <p>Height: <%= @user.height %></p>
+    <p>Happiness: <%= @user.happiness %></p>
+    <p>Nausea: <%= @user.nausea %></p>
+    <p>Tickets: <%= @user.tickets %></p>
+    <p>Mood: <%= @user.mood %></p>
+    <% end %>
+
+    <%= link_to "See attractions", attractions_path %>
