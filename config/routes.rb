@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   
 
   resources :users
-#   post 'attractions/:id', to: 'rides#create'
-  post '/attractions/:id', to: 'rides#create'
   resources :rides
   resources :attractions
 end

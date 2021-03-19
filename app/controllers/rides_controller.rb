@@ -5,13 +5,14 @@ class RidesController < ApplicationController
     end
 
     def create
-        ride = Ride.create(ride_params)
-        flash[:message] = ride.take_ride
-        redirect_to user_path(current_user)
+        @ride = Ride.create(ride_params)
+        message = @ride.take_ride
+        flash[:message] = message
+        redirect_to user_path(@ride.user_id) 
     end
 
     def ride_params
-        params.require(:ride).permit(:attraction_id, :user_id)
+        params.require(:ride).permit(:user_id, :attraction_id)
     end
 
 
