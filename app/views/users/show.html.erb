@@ -1,13 +1,18 @@
+
+
 <h1> Welcome to the Abusement Park, <%= @user.name %></h1>
 
-<% if @user.admin %>
-    Admin
-    <% else %>
+    <p>Name: <%= @user.name %></p>
+
     <p>Height: <%= @user.height %></p>
     <p>Happiness: <%= @user.happiness %></p>
     <p>Nausea: <%= @user.nausea %></p>
     <p>Tickets: <%= @user.tickets %></p>
     <p>Mood: <%= @user.mood %></p>
+
+    <% if @user.admin %>
+    <h3>ADMIN</h3>
     <% end %>
 
-    <%= link_to "See attractions", attractions_path %>
+    <%= link_to "See attractions", attractions_path %><br>
+    <%= link_to "Log Out", logout_path %>

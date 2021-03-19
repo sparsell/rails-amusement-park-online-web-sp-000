@@ -1,9 +1,15 @@
-<h2> Welcome back! </h2>
+
+
 <h4> Log in below </h4>
 
 <%= form_for :user do |f| %>
 
-Username: <%=f.text_field :name %> <br>
-Password: <%=f.password_field :password_digest %>
-<%= f.submit "Submit" %>
+    <%= f.label :name %> 
+    <%= f.collection_select :user_name, User.all, :name, :name %><br>
+    <%= f.label :password, "Password" %>
+    <%=f.password_field :password %><br>
+    <%= f.submit "Sign in" %>
 <% end %>
+
+
+
