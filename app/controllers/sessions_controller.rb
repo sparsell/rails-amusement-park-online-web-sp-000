@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
             # binding.pry
         else
             flash[:message] = "Login not successful. Please try again."
-            render 'new'
+            render '/'
         end
     end
 
